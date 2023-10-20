@@ -1,14 +1,56 @@
 @charset "utf-8";
 @import url(fonts.css);
 
+
 /*-------------------------------------------------------------------
     파일정의: Common css
     순서:    Header > table > list > form ... > Footer 
 -------------------------------------------------------------------*/
+:root { 
+	--main_color:#222222;
+	--white_color:#ffffff;
+    --gray_color: #999;
+    --orange: #ff9c00;
+    --green: #84ad10;
+
+	--font-size-xsm: clamp(7px, 0.45vw + 6.86px, 12px);
+	--font-size-sm: clamp(9px, 0.45vw + 6.86px, 16px);
+	--font-size-base: clamp(10px, 0.59vw + 8.52px, 18px);
+    --font-size-menu: clamp(10.5px, 0.77vw + 10.57px, 19px);
+	--font-size-md: clamp(11px, 0.77vw + 10.57px, 20px);
+	--font-size-extramd: clamp(12.5px, 0.77vw + 10.57px, 24px);
+	--font-size-lg: clamp(15.63px, 1vw + 13.12px, 30px);
+	--font-size-xl: clamp(19.53px, 1.3vw + 16.27px, 36px);
+	--font-size-xxl: clamp(24.41px, 1.69vw + 20.18px, 48px);
+	--font-size-xxxl: clamp(30.52px, 2.2vw + 25.03px, 60px);
+    --header_color: #000000;
+}
+.container {max-width: 1280px; margin-left: auto; margin-right: auto;}
+.flex_sb {display: flex; justify-content: space-between;}
+.bo {border: 1px solid red;}
 
 /* header start */
+.head {position: sticky; top: 0; width: 100%; right: 0; left: 0; overflow: hidden; box-sizing: border-box; z-index: 10; border-bottom: 1px solid #dddddd; min-height: 101px; background-color: #ffffff;}
+.header_inn {display: flex; color: var(--white); transition: 0.3s; position: relative; min-height: 100px; align-items: start; z-index: 100;}
+.logo {position: absolute; left: 100px; top: 16px;}
+.logo img {width: 100%; height: 100%;}
+.gnb {position: relative; top: 0; width: 100%; height: max-content;}
+.gnb > ul {display: flex; color: var(--header_color); position: relative; top: 0px; left: 0; height: auto; margin-top: 42px;}
+.gnb > ul > li {display: inline-block; text-align: center; width: auto; font-size: var(--font-size-menu); font-weight: 500; width: 256px; text-align: center;}  
+.gnb > ul > li > a {display: block; position: relative; width: 100%; color: inherit; letter-spacing: -0.025em; }
+.first_deep {display: none; flex-direction: column; text-align: center; width: min-content; flex-wrap: wrap; min-width: 100%; margin: 20px 0; transition: all 0.3s;}
+.first_deep > li {line-height: normal;}
+.first_deep > li > a {font-size: var(--font-size-sm); display: inline-block; color: var(--main_color);}
+.first_deep > li > a:hover {color: var(--green); transition: all 0.2s;}
+.gnb > ul > li > a:after {content: ""; position: absolute; width: 0; left: 50%; height: 2px; background-color: var(--green); transition: all 0.5s; bottom: -10px;}
+.gnb > ul > li:hover a::after {left: 0; width: 100%;}
+.gnb:hover .first_deep {display: flex;}
 /* header end */
 
+
+/* aside start */
+
+/* aside end */
 
 /* footer start */
 /* footer end */

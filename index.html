@@ -14,21 +14,85 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/media.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     
     </head>
     <body>
         <div class="wrap">
             <!-- GNB-->
+            <div class="popup_phone">
+                <div class="head_contact containerhghhh">
+                    <p class="reception">입소 상담 문의</p>
+                    <span>1588-0000</span>
+                </div>
+                <div class="close_head">
+                    <input type="checkbox" class="">
+                    <p class="popup_close">오늘하루 열지 않음</p>
+                    <span class="close_header_pop"></span>
+                </div>
+            </div>
             <header class="head">
-                <div class="header_inn container">
-                lol
+                <div class="header_inn">
+                    <a href="#" class="logo"><img src="./assets/imgs/icons/logo_세로.png" alt="logo"></a>
+                    <nav class="gnb container">
+                        <ul>
+                            <li>
+                                <a href="#">오아시스 메디홈에 대해</a>
+                                <ul class="first_deep">
+                                    <li><a href="/pages/sub/01_About_company/01_greetings.html">인사말</a></li>
+                                    <li><a href="/pages/sub/01_About_company/02_vision.html">오아시스 메디홈의 비전</a></li>
+                                    <li><a href="/pages/sub/01_About_company/03_directions.html">조직도</a></li>
+                                    <li><a href="/pages/sub/01_About_company/04_organization.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/pages/sub/02_Facility_intro/01_facility_introduction.html">시설소개</a>
+                            </li>
+                            <li>
+                                <a href="#">입소안내</a>
+                                <ul class="first_deep">
+                                    <li><a href="/pages/sub/03_Admission/01_target.html">입소 대상 및 절차</a></li>
+                                    <li><a href="/pages/sub/03_Admission/02_fee.html">입소 비용</a></li>
+                                    <li><a href="/pages/sub/03_Admission/03_consultion.html">입소 상담</a></li>
+                                    <li><a href="/pages/sub/03_Admission/05_insurance.html">입소 신청</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">서비스 안내</a>
+                                <ul class="first_deep">
+                                    <li><a href="/pages/sub/04_Service_info/01_medical_nurse.html">의료 간호 서비스</a></li>
+                                    <li><a href="/pages/sub/04_Service_info/02_treatment.html">재활 치료 서비스</a></li>
+                                    <li><a href="/pages/sub/04_Service_info/03_life_support.html">생활 지원서비스</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">커뮤니티</a>
+                                <ul class="first_deep">
+                                    <li><a href="/pages/sub/05_Community/01_01_notice_list.html">공지사항</a></li>
+                                    <li><a href="/pages/sub/05_Community/05_02_job_list.html">어르신의 입소생활</a></li>
+                                    <li><a href="/pages/sub/05_Community/05_04_job_recruitment.html">채용공고</a></li>
+                                    <li><a href="/pages/sub/05_Community/05_01_job_info.html">자원봉사 안내</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </header> <!-- //GNB -->
         
             <!-- Banner-->
-            <section class="banner">
-                <div class="banner_inn container">
-                </div>
+            <section class="banner swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide news">
+                        <img src="/assets/imgs/main/사각형 2.png" alt="news image" class="top_news_image">
+                        <p class="banner_text"><strong>온가족이 믿고 <br />안심할 수 있는 요양원,</strong> 오아시스메디홈</p>
+                    </div>
+                    <div class="swiper-slide news">
+                        <img src="/assets/imgs/main/사각형 2 복사.png" alt="news image" class="top_news_image">
+                        <p class="banner_text"><strong>온가족이 믿고 안심할 수 있는 요양원,m</strong> 오아시스메디홈</p>
+                    </div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
             </section> <!-- //Banner -->
     
             <!-- 본문 -->
@@ -60,6 +124,7 @@
 
     <!-- Script -->
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="/assets/js/common.js"></script>

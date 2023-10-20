@@ -5,10 +5,49 @@
     파일정의: Main page style
     순서:    Contents > Main top(banner) > Aside
 -------------------------------------------------------------------*/
+:root { 
+	--main_color:#222222;
+	--white_color:#ffffff;
+    --gray_color: #999;
+    --orange: #ff9c00;
+    --green: #84ad10;
+        
+	--font-size-xsm: clamp(7px, 0.45vw + 6.86px, 12px);
+	--font-size-mdsm: clamp(8px, 0.45vw + 6.86px, 14px);
+	--font-size-sm: clamp(9px, 0.45vw + 6.86px, 16px);
+	--font-size-base: clamp(10px, 0.59vw + 8.52px, 18px);
+	--font-size-menu: clamp(10.5px, 0.77vw + 10.57px, 19px);
+	--font-size-md: clamp(11px, 0.77vw + 10.57px, 20px);
+	--font-size-extramd: clamp(12.5px, 0.77vw + 10.57px, 24px);
+	--font-size-lg: clamp(15.63px, 1vw + 13.12px, 30px);
+	--reception: clamp(15.63px, 1vw + 13.12px, 32px);
+	--font-size-xl: clamp(19.53px, 1.3vw + 16.27px, 36px);
+	--font-size-xxl: clamp(26px, 1.69vw + 20.18px, 55px);
+	--font-size-xxxl: clamp(30.52px, 2.2vw + 25.03px, 60px);
+}
 
 /* contents start */
-
+    .popup_phone {display: flex; justify-content: center; position: relative; color: var(--white_color); background-color: var(--orange); height: 70px; width: 100%;}
+    .popup_phone > div {display: flex;}
+    .head_contact {display: flex; align-items: center;}
+    .reception {font-size: var(--font-size-lg); font-weight: 300; letter-spacing: -0.05em; display: inline-flex; align-items: center; padding-bottom: 4px;}
+    .reception:before {content: url(../imgs/icons/벡터\ 고급\ 개체.png); margin-right: 14px; margin-top: 4px;}
+    .reception + span {font-family: "Pretendard"; font-weight: bold; font-size: var(--reception); letter-spacing: 0; margin-left: 13px; }
+    .close_head {position: absolute; right: 14px; bottom: 10px; display: flex; align-items: center; }
+    .close_head input {width: 16px; height: 16px;}
+    .popup_close {font-size: var(--font-size-mdsm); font-weight: 400; letter-spacing: -0.025em; display: inline-flex; align-items: center; margin-left: 7px; gap: 11px;}
+    .popup_close::after {content: url(../imgs/icons/xmark-solid.png);}
+    
     /* main top start (banner) */
+    .banner{width: 100%; height: 700px; color: var(--white_color);}
+    .news {max-height: 700px; height: 100%; width: 100%; position: relative; background-color: #ffffff; }
+    .top_news_image {z-index: -1; position: absolute; object-fit: cover; width: 100%; height: 100%;}
+    .banner_text {max-width: 475px; min-height: 250px; position: absolute; top: 79px; left: 100px; font-size: var(--font-size-xxl); letter-spacing: -0.05em; line-height: 94px; }
+    
+    
+    /* .swiper-button-next {left: calc(var(--swiper_image_width) - 20px - 28px)!important}
+    .swiper-button-prev {left: 20px!important;}
+    .swiper-button-next::after, .swiper-button-prev::after {font-size: 55px!important; color: #9c9c9d!important} */
     /* main top end (banner) */
 
 /* contents end */
