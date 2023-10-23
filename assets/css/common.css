@@ -60,7 +60,8 @@
 /* aside.floating end */
 
 /* footer start */
-.footer {border-top: 1px solid #dddddd;}
-.footer_inn {display: flex; gap: 63px;}
-.footer_info p {font-size: var(--font-size-xsm); font-weight: 400; color: var(--gray_color); letter-spacing: -0.025em;}
+.footer {border-top: 1px solid #dddddd; margin-top: 140px; min-height: 180px;}
+.footer_inn {display: flex; gap: 63px; height: max-content; padding-top:34px;}
+.footer_inn a {padding-top: 5px;}
+.footer_info p {font-size: var(--font-size-xsm); font-weight: 400; color: var(--gray_color); letter-spacing: -0.025em; line-height: 24px;}
 /* footer end */
