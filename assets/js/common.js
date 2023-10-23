@@ -13,13 +13,13 @@ const swiper = new Swiper(".swiper", {
 });
 
 var navbar = document.getElementsByClassName("head")[0];
-console.log(navbar);
 var sticky = navbar.offsetTop;
+console.log(sticky);
 
 function myFunction() {
-  if (window.scrollY >= sticky) {
+  if (window.scrollY > sticky) {
     navbar.classList.add("sticky");
-  } else {
+  } else if (sticky) {
     navbar.classList.remove("sticky");
   }
 }

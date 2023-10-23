@@ -5,8 +5,80 @@
     파일정의: Pages contents css
     순서:    Page name > page name > page name ...
 -------------------------------------------------------------------*/
+:root { 
+	--main_color:#222222;
+	--white_color:#ffffff;
+    --gray_color: #999;
+    --orange: #ff9c00;
+    --green: #84ad10;
+        
+    --font-size-sm: clamp(8px, 0.38vw + 6.48px, 13.33px);
+    --font-size-extrasm: clamp(9px, 0.38vw + 6.48px, 16px);
+    --font-size-base: clamp(10px, 0.57vw + 7.71px, 18px);
+    --font-size-extrabase: clamp(11px, 0.57vw + 7.71px, 20px);
+    --font-size-md: clamp(12.5px, 0.84vw + 9.13px, 22px);
+    --font-size-lg: clamp(16px, 1.23vw + 10.72px, 30px);
+    --font-size-xl: clamp(18px, 1.77vw + 12.46px, 40px);
+    --font-size-extraxl: clamp(22px, 1.77vw + 12.46px, 50px);
+    --font-size-xxl: clamp(24.41px, 2.53vw + 14.31px, 55px);
+    --font-size-xxxl: clamp(30.52px, 3.59vw + 16.18px, 80.71px);
+}
+
 
 /* common */
+.head {position: fixed; top: 0;}
+.sub_banner {min-height: 500px; position: relative; width: 100%; background-color: #22222280; margin-top: 101px;}
+.sub_banner img {width: 100%; height: 100%; position: absolute; z-index: -1;}
+.sub_banner_text {display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 495px;}  
+.sub_banner h1 {font-size: var(--font-size-xxl); color: var(--white_color); font-weight: bold; text-align: center; letter-spacing: -0.05em; margin-bottom: 40px; line-height: 1;}
+.sub_banner h3 {font-size: var(--font-size-md); color: var(--white_color); font-weight: 400; text-align: center; letter-spacing: -0.05em; line-height: 30px;}
+
+.sub_menu {height: 72px; border-bottom: 2px solid #efefef; margin-bottom: 140px;}
+.sub_menu ul {display: flex; align-items: center; justify-content: center; height: 100%;}
+.sub_menu li {max-width: 256px; border-right: 1px solid #dddddd; width: 100%; text-align: center; padding-top: 12px; padding-bottom: 12px;}
+.sub_menu a {font-size: 19px; font-weight: 400; letter-spacing: -0.025em; color: var(--gray_color); line-height: 1;}
+a.on {color: var(--main_color); font-weight: bold; }
 
 /* Pages contents css */
+
+/* 01_01_greetings_start */
+.greetings {display: flex; gap: 110px; justify-content: start; margin-top: -2px; height: max-content;}
+.greetings_txt {display: flex; flex-direction: column; letter-spacing: -0.025em; flex: 1 0 auto; padding-top: 31px; justify-content: space-between;} 
+.greetings_txt {max-width: 456px; display: flex; flex-direction: column;}
+.greeting_ttl {font-size: var(--font-size-lg); color:var(--green); line-height: 44px; }
+.greeting_desc {font-size: var(--font-size-base); color:var(--main_color); line-height: 28px; padding-top: 27px; font-weight: 400; }
+.greeting_date {font-size: var(--font-size-base); color:var(--main_color); line-height: 28px; text-align: right; font-weight: 400; padding-bottom: 5px; }
+.greeting_sign {font-size: var(--font-size-base); color:var(--main_color); line-height: 28px; text-align: right; font-weight: 400; line-height: 1; justify-items: end; }
+/* 01_01_greetings_end */
+
+/* 01_02_vision_start */
+.vision_cont h2 {font-size: var(--font-size-xl); letter-spacing: -0.025em; font-weight: bold;}
+.mission {display: flex; flex-direction: column; justify-content: center; margin-top: -4px; }
+.mission > img {width: 703px; align-self: center; margin-top: 4px;}
+.happy {margin-top: 56px;}
+.spell {display: flex; flex-direction: column; align-items: center;}
+.spell img + p {font-size: var(--font-size-lg); color: var(--green); font-weight: bold; letter-spacing: -0.025em; padding-top: 17px;}
+.spell p:last-of-type {font-size: var(--font-size-md); letter-spacing: -0.05em; font-weight: 400; padding-top: 16px;}
+
+.vision {margin-top: 196px;}
+.circle_diagram {position: relative;}
+.circle_diagram > img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); margin-top: 40px;}
+.circle {width: 300px; height: auto; aspect-ratio: 1/1; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column;}
+.circle1 {background-color: #9dbd40; margin: 0 auto;}
+.circle2 {background-color: #718a44;}
+.circle3 {background-color: #ffc466;}
+.circle1 h4 {color:#84ad10 ;}
+.circle2 h4 {color:#4d6d15 ;}
+.circle3 h4 {color:#ff9c00 ;}
+.circle h4 {font-size: var(--font-size-xl); font-weight: 800; letter-spacing: -0.025em; text-align: center; padding-bottom: 17px;}
+.circle p {font-size: var(--font-size-md); font-weight: 500; letter-spacing: -0.025em; text-align: center; color: var(--white_color); line-height: 30px;}
+.bottom_circle {display: flex; justify-content: center; gap: 51px;}
+
+.values {margin-top: 196px; padding-bottom: 59px;}
+.values > div {display: flex; gap: 95px; margin-top: 59px;}
+.values_card {flex: 1; border: 2px solid #bed480; display: flex; flex-direction: column; height: 397px; padding: 46px 0; justify-content: space-between;}
+.values_card > span {font-size: 50px; color: var(--green); font-weight: bold; letter-spacing: -0.025em; text-align: center; line-height: 1.25;} 
+.img_wrap {align-self: center;}
+/* 01_02_vision_end */
+  
 
