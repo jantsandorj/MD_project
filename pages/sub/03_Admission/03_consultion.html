@@ -69,23 +69,57 @@
             </div>
         </header> <!-- //GNB -->
 
-        <!-- Banner-->
-        <section class="banner">
-            <div class="banner_inn container">
+        <!-- //Banner -->
+        <div class="sub_banner">
+            <img src="/assets/imgs/sub/target_bg.png" alt="bg_image">
+            <div class="sub_banner_text">
+                <h1>입소 상담</h1>
+                <h3>고객감동과 행복에 최선을 다하는 <br />
+                    오아시스메디홈 요양병원을 소개합니다.
+                </h3>
             </div>
-        </section> <!-- //Banner -->
+        </div> <!-- //Banner -->
+        <div class="sub_menu">
+            <ul>
+                <li><a href="01_target.html">입소 대상 및 절차</a></li>
+                <li><a href="02_fee.html">입소 비용</a></li>
+                <li><a href="03_consultion.html">입소 상담</a></li>
+                <li><a href="05_insurance.html">입소 대기 신청</a></li>
+            </ul>
+        </div>
 
         <!-- 본문 -->
-        <main class="conts">
-            <section class="conts1 container">
-                <div class="inn">content01</div>
-            </section>
-            <section class="conts2 container">
-                <div class="inn">content02</div>
-            </section>
-            <section class="conts3 container">
-                <div class="inn">content03</div>
-            </section>
+        <main class="conts consultion container">
+            <h3>상담신청</h3>
+            <form action="" class="consule_form">
+                <div class="input_wrap">
+                    <label class="base" for="name">이름</label>
+                    <input type="text" id="name" name="name" value="" class="base">
+                </div>
+                <div class="input_wrap">
+                    <label class="base" for="name">휴대폰번호</label>
+                    <input type="number" id="phone" name="phone" value="" class="base">
+                </div>
+                <div class="input_wrap">
+                    <label class="base" for="dtl">내용</label>
+                    <input type="text" id="dtl" name="dtl" value="" class="base">
+                </div>
+            </form>
+            <p class="form_desc">◎ 개인정보의 수집 및 이용 동의 <br />
+                - 이용자가 제공한 모든 정보는 다음의 목적을 위해 활용하며, 하기 목적 이외의 용도로는 사용되지 않습니다. <br />
+                &emsp;① 개인정보 수집 항목 및 수집·이용 목적 <br />
+                &emsp;가) 수집 항목 (필수항목) - 성명(국문), 전화번호(휴대전화)<br />
+                &emsp;나) 수집 및 이용 목적 - 오아시스메디홈 입소에 관한 상담 및 안내<br />
+                &emsp;② 개인정보 보유 및 이용기간 - 수집·이용 동의일로부터 상담 및 안내 완료 시 까지<br />
+                &emsp;③ 동의거부 – 개인정보 수집 및 이용에 동의 하지 않으실 경우 상담 신청 정보가 수집 되지 않으며 상담도 진행도 되지 않음을 알려드립니다.<br />
+            </p>
+            <label class="chck_wrp" for="cllct_info">개인정보의 수집 및 이용에 동의합니다.
+                <input type="checkbox" name="cllct_info" id="cllct_info">
+                <span class="checkmark"></span>
+            </label>
+            <div class="btn_wrap">
+                <button class="b_btn"><span>상담신청</span></button>
+            </div>
         </main>
 
         <!-- 플로팅메뉴 -->
