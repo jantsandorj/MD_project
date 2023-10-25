@@ -19,7 +19,7 @@
     --font-size-md: clamp(12.5px, 0.84vw + 9.13px, 22px);
     --font-size-lg: clamp(16px, 1.23vw + 10.72px, 30px);
     --font-size-xl: clamp(18px, 1.77vw + 12.46px, 40px);
-    --font-size-extraxl: clamp(22px, 1.77vw + 12.46px, 50px);
+    --font-size-extraxl: clamp(22px, 2vw + 13.46px, 50px);
     --font-size-xxl: clamp(24.41px, 2.53vw + 14.31px, 55px);
     --font-size-xxxl: clamp(30.52px, 3.59vw + 16.18px, 80.71px);
 }
@@ -36,10 +36,12 @@
 .sub_menu {height: 72px; border-bottom: 2px solid #efefef; margin-bottom: 140px;}
 .sub_menu ul {display: flex; align-items: center; justify-content: center; height: 100%;}
 .sub_menu li {max-width: 256px; border-right: 1px solid #dddddd; width: 100%; text-align: center; padding-top: 12px; padding-bottom: 12px;}
+.sub_menu li::before {display: none;}
 .sub_menu a {font-size: 19px; font-weight: 400; letter-spacing: -0.025em; color: var(--gray_color); line-height: 1;}
 a.on {color: var(--main_color); font-weight: bold; }
 
 h3 {font-size: var(--font-size-xl); font-weight: bold; letter-spacing: -0.05em;}
+h2 {font-size: var(--font-size-extraxl); font-weight: bold; letter-spacing: -0.05em;}
 .green_ttl {font-size: var(--font-size-md); font-weight: bold; letter-spacing: -0.025em; color: var(--green);}
 .green_color {color: var(--green);}
 .base {font-size: var(--font-size-base); font-weight: 400; letter-spacing: -0.025em;}
@@ -120,7 +122,7 @@ h3 {font-size: var(--font-size-xl); font-weight: bold; letter-spacing: -0.05em;}
 .eligiblity ul li {line-height: 36px; padding-left: 30px;}
 .eligiblity ul li:nth-child(2)::before {top: -2px;}
 .procedure {margin-top: 188px;}
-.flex_list {display: flex; margin-top: 83px;}
+.procedure .flex_list {display: flex; margin-top: 83px;}
 .flex_item {display: flex; flex-direction: column; align-items: center; position: relative;}
 .procedure .flex_item > .img_wrap {height: 190px; margin-bottom: 20px;}
 .procedure .flex_item img {margin-top: auto;}
@@ -185,31 +187,71 @@ h3 {font-size: var(--font-size-xl); font-weight: bold; letter-spacing: -0.05em;}
 /* 03_03_consulation_end */
 
 /* 03_05_insurance_start */
+.insurance {margin-top: -1px; padding-bottom: 7px;}
 .insure_ttl {display: flex; justify-content: space-between;}
-.insure_ttl h3,.insurance_h3 {background-color: #4d6d15; color: var(--white_color); display: inline-flex; gap: 15px; padding-right: 13px; padding: 16px 13px 16px 15px; }
+.insure_ttl h3,.insurance_h3 {background-color: #4d6d15; color: var(--white_color); display: inline-flex; gap: 15px; padding-right: 13px; padding: 14px 13px 16px 15px; }
 .insure_ttl h3::before {content: url(/assets/imgs/sub/insurance1.png);}
-.insure_ttl p {color: var(--white_color); background-color: var(--green); height: 45px; display: inline-flex; align-items: center; gap: 20px; padding: 0 34px 0 43px; align-self: flex-end; margin-right: 27px;}  
+.insure_ttl p {color: var(--white_color); background-color: var(--green); height: 45px; display: inline-flex; align-items: center; gap: 20px; padding: 0 34px 0 43px; align-self: flex-end; margin-right: 27px; line-height: 45px; margin-bottom: -1px;}  
 .insure_ttl p::after {content: url(/assets/imgs/sub/arr.png);}
-.insurance li {position: relative;}
-.insurance li::before {content: url(/assets/imgs/sub/disc_sq.png); position: absolute; left: 0; top: -3px;}
-.elderly_insurance li span {font-weight: bold;}
-.insurance .flex_item span {color: #4d6d15; font-size: var(--font-size-lg); font-weight: bold; letter-spacing: -0.05em;}
-.insurance .flex_item span + p {font-size: var(--font-size-md); font-weight: bold; letter-spacing: -0.05em;}
-.insurance .flex_item .base {font-weight: 300;}
+.insure_ttl + p { line-height: 28px; margin-top: 34px; letter-spacing: -0.01em;}
+.insure_step > h3 {margin-top: 145px;}
+.feature_elderly + p {margin-top: 33px; line-height: 28px; letter-spacing: 0.03em;}
+.green_color.base {margin-top: 19px; line-height: 1;}
+.green_color.base + h3 {line-height: 0.7;}
+li {position: relative;}
+li::before {content: url(/assets/imgs/sub/disc_sq.png); position: absolute; left: 6px; top: -5px;}
+.elderly_insurance {margin-top: 54px;}
+.elderly_insurance li {line-height: 36px; padding-left: 30px;}
+.elderly_insurance li span {font-weight: bold; width: 108px; display: inline-block;}
+.elderly_insurance + h3 {line-height: 7px;}
+.insurance .flex_list { gap: 102px; display: flex; margin-top: 74px;}
+.insurance .flex_item {flex: 1; display:flex; border:5px solid var(--green); border-radius: 20px; position: relative; padding: 35px 0; gap: 30px; justify-content: space-between;}
+.insurance .flex_item::after {content: url(/assets/imgs/sub/angle-right-solid\ 복사.png); position: absolute; right: -24px; top: 50%; transform: translate(60px, -50%);}
+.insurance .flex_item:last-child:after {display: none;}
+.insurance .flex_item span {color: #4d6d15; font-size: var(--font-size-lg); font-weight: bold; letter-spacing: -0.05em; position: relative; display: inline-block;}
+.insurance .flex_item span::after { content: ""; position: absolute; width: 100%; background-color: #e3f49e; height: 9px; bottom: 1px; left: 0; z-index: -1;}
+.insurance .flex_item span + p {font-size: var(--font-size-md); font-weight: bold; letter-spacing: -0.05em; line-height: 28px; text-align: center;}
+.insurance .flex_item .base {font-weight: 300; line-height: 30px; padding-top: 2px;}
+.insurance .insurance_h3 {margin-top: 137px; padding:12px 13px 18px 15px ;}
 .insurance_h3::before {content: url(/assets/imgs/sub/insurance2.png);}
-.insure_list_criteria p {font-size: var(--font-size-lg); font-weight: bold; letter-spacing: -0.05em; }
+.insure_list_criteria p {font-size: var(--font-size-lg); font-weight: bold; letter-spacing: -0.05em; margin-top: 59px; line-height: 1;}
 .insure_list_criteria li span {font-size: var(--font-size-base); font-weight: 400; color: var(--green);}
-.table_wrap {border-top: 1px solid #222222; text-align: center; width: 100%;}
+.benefit p {padding-top: 40px;}
+.benefit ul {margin-top: 38px;}
+.benefit li::before {top: 2px; left: 14px;} 
+.benefit li span{padding-left: 38px;} 
+.table_wrap {border-top: 2px solid #222222; text-align: center; width: 100%; margin-top: 30px;}
 table {width: 100%;}
 thead {background-color: #edf3db; height: 81px;}
-tbody tr {height: 81px;}
+tbody tr {height: 80px;}
+tbody tr:nth-child(1) {height: 81px;}
+tbody tr:nth-child(5) td {padding-bottom: 3px;}
 tbody tr td:nth-child(2) {text-align: left; padding-left: 101px;}
-.benefit tbody tr td:nth-child(2) {text-align: left; padding-left: 40px;}
-.benefit tbody tr {height: 101px;}
-tr {border-bottom: 1px solid #dddddd;}
+.benefit table {margin-bottom: 59px;}
+.benefit tbody tr td:nth-child(2) {text-align: left; padding-left: 40px; line-height: 28px;}
+.benefit tbody tr:nth-child(1) {height: 98px;}
+.benefit tbody tr {height: 100px; }
+tr {border-bottom: 2px solid #dddddd;}
 colgroup col {border-right: 1px solid #dddddd;}
 colgroup col:last-child {border: 0;}
 /* 03_05_insurance_end */
-  
 
+/* 04_01_medical_nurse_start */
+.medical, .support, .treatment {margin-top: -5px; padding-bottom: 59px;}
+.flex_reverse_list {display: flex; flex-direction: column; margin-top: 100px;}
+.flex_reverse {display: flex; margin-bottom: 1px;}
+.flex_reverse > * {flex: 1;}
+.flex_reverse > img {width: 100%; aspect-ratio: 640 / 361; height: auto; position: relative; display: inline-block;}
+.flex_reverse > img::after {position: absolute; content: ""; width: 100px; height: 100px; background-color: #0000001a; top: 0; left: 0;}
+.flex_reverse:nth-child(even) {flex-direction: row-reverse;}
+.flex_txt_wrap {padding-left: 60px; display: flex; flex-direction: column; justify-content: center; gap: 31px; padding-bottom: 20px;} 
+.flex_txt_wrap p {font-size: var(--font-size-lg); font-weight: bold; line-height: 0.3;}
+.flex_reverse:nth-of-type(2) .flex_txt_wrap {padding-bottom: 7px; gap: 32px;}
+.flex_reverse:nth-of-type(3) .flex_txt_wrap {padding-bottom: 9px; gap: 34px;}
+.flex_txt_wrap li {font-size: var(--font-size-extrabase); font-weight: 400; letter-spacing: -0.025em; line-height: 34px; padding-left: 18px;}
+.flex_txt_wrap li::before {left: 0;}
+/* 04_01_medical_nurse_end */
 
+/* 04_03_support_start */
+.support .flex_txt_wrap p {line-height: 44px;}
+/* 04_03_support_end */

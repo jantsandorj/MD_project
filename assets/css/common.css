@@ -37,9 +37,11 @@
 .gnb {position: relative; top: 0; width: 100%; height: max-content; }
 .gnb > ul {display: flex; color: var(--header_color); position: relative; top: 0px; left: 0; height: auto; margin-top: 42px;}
 .gnb > ul > li {display: inline-block; text-align: center; width: auto; font-size: var(--font-size-menu); font-weight: 500; width: 256px; text-align: center;}  
+.gnb > ul > li::before {display: none;}
 .gnb > ul > li > a {display: block; position: relative; width: 100%; color: inherit; letter-spacing: -0.025em; }
 .first_deep {display: none; flex-direction: column; text-align: center; width: min-content; flex-wrap: wrap; min-width: 100%; margin: 20px 0; transition: all 0.3s;}
 .first_deep > li {line-height: normal;}
+.first_deep > li::before {display: none;}
 .first_deep > li > a {font-size: var(--font-size-sm); display: inline-block; color: var(--main_color);}
 .first_deep > li > a:hover {color: var(--green); transition: all 0.2s;}
 .gnb > ul > li > a:after {content: ""; position: absolute; width: 0; left: 50%; height: 2px; background-color: var(--green); transition: all 0.5s; bottom: -10px;}
