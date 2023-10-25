@@ -69,23 +69,95 @@
             </div>
         </header> <!-- //GNB -->
 
-        <!-- Banner-->
-        <section class="banner">
-            <div class="banner_inn container">
+        <!-- //Banner -->
+        <div class="sub_banner">
+            <img src="/assets/imgs/sub/service_bg.png" alt="bg_image">
+            <div class="sub_banner_text">
+                <h1>공지사항</h1>
+                <h3>고객감동과 행복에 최선을 다하는 <br />
+                    오아시스메디홈 요양병원을 소개합니다.
+                </h3>
             </div>
-        </section> <!-- //Banner -->
+        </div> <!-- //Banner -->
+        <div class="sub_menu">
+            <ul>
+                <li><a href="01_01_notice_list.html">공지사항</a></li>
+                <li><a href="">프로그램</a></li>
+                <li><a href="">식단표</a></li>
+                <li><a href="">어르신의 입소생활</a></li>
+                <li><a href="05_01_job_info.html">자원봉사 안내</a></li>
+            </ul>
+        </div>
 
         <!-- 본문 -->
-        <main class="conts">
-            <section class="conts1 container">
-                <div class="inn">content01</div>
-            </section>
-            <section class="conts2 container">
-                <div class="inn">content02</div>
-            </section>
-            <section class="conts3 container">
-                <div class="inn">content03</div>
-            </section>
+        <main class="conts notice_list container">
+            <div class="filter">
+                <select>
+                    <option value="" checked="">제목 + 내용</option>
+                    <option value="">내용</option>
+                    <option value="">제목</option>
+                </select>
+                <div class="search_wrap">
+                    <input type="text" id="search">
+                    <button><span>검색</span></button>
+                </div>
+            </div>
+            <div class="table_wrap notice_table">
+                <table>
+                    <colgroup>
+                        <col width="106px">
+                        <col>
+                        <col width="113px">
+                        <col width="165px">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>NO</th>
+                            <th>제목</th>
+                            <th>작성일</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="green_bg">공지</span></td>
+                            <td>공지사항 제목이 출력됩니다.</td>
+                            <td>2023.09.00</td>
+                            <td>106</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>공지사항 제목이 출력됩니다. 공지사항 제목</td>
+                            <td>2023.09.00</td>
+                            <td>53</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>공지사항 제목</td>
+                            <td>2023.09.00</td>
+                            <td>51</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>공지사항 제목이 출력됩니다. 공지사항 제목이 출력됩니다.</td>
+                            <td>2023.09.00</td>
+                            <td>48</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="/pages/sub/05_Community/01_03_notice_writing.html" class="write">글작성</a>
+            <div class="paging_wrap">
+                <div class="paging_conts">
+                    <a href="javascript:void(0);" class="paging_start"></a>
+                    <a href="javascript:void(0);" class="paging_prev"></a>
+                    <a href="javascript:void(0);" class="paging_number">1</a>
+                    <a href="javascript:void(0);" class="paging_number">2</a>
+                    <a href="javascript:void(0);" class="paging_number">3</a>
+                    <a href="javascript:void(0);" class="paging_next"></a>
+                    <a href="javascript:void(0);" class="paging_end"></a>
+                </div>
+            </div>
         </main>
 
         <!-- 플로팅메뉴 -->

@@ -9,6 +9,7 @@
     <meta name="description" content="Good Care ! Good Care !" />
 
     <title>MDr. BARO CARE</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.0/classic/ckeditor.js"></script>
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
@@ -69,23 +70,49 @@
             </div>
         </header> <!-- //GNB -->
 
-        <!-- Banner-->
-        <section class="banner">
-            <div class="banner_inn container">
+        <!-- //Banner -->
+        <div class="sub_banner">
+            <img src="/assets/imgs/sub/service_bg.png" alt="bg_image">
+            <div class="sub_banner_text">
+                <h1>공지사항</h1>
+                <h3>고객감동과 행복에 최선을 다하는 <br />
+                    오아시스메디홈 요양병원을 소개합니다.
+                </h3>
             </div>
-        </section> <!-- //Banner -->
+        </div> <!-- //Banner -->
+        <div class="sub_menu">
+            <ul>
+                <li><a href="01_01_notice_list.html">공지사항</a></li>
+                <li><a href="">프로그램</a></li>
+                <li><a href="">식단표</a></li>
+                <li><a href="">어르신의 입소생활</a></li>
+                <li><a href="05_01_job_info.html">자원봉사 안내</a></li>
+            </ul>
+        </div>
 
         <!-- 본문 -->
-        <main class="conts">
-            <section class="conts1 container">
-                <div class="inn">content01</div>
-            </section>
-            <section class="conts2 container">
-                <div class="inn">content02</div>
-            </section>
-            <section class="conts3 container">
-                <div class="inn">content03</div>
-            </section>
+        <main class="conts container notice_write">
+            <div class="ann_title">
+                <input type="text" placeholder="공지사항 제목을 입력하세요" value="">
+                <div class="chk_outer">
+                    <label class="chck_wrp" for="designed_ann">공지로 지정
+                        <input type="checkbox" name="designed_ann" id="designed_ann">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="chck_wrp" for="main_output">메인출력
+                        <input type="checkbox" name="main_output" id="main_output">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="editor_wrap">
+                <div id="editor"></div>
+            </div>
+            <div class="btn_wrap">
+                <!-- registration button -->
+                <button class="b_btn"><span>등록</span></button>
+                <button class="b_btn outline"><span>취소</span></button>
+            </div>
         </main>
 
         <!-- 플로팅메뉴 -->
@@ -127,6 +154,13 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
 <script src="/assets/js/common.js"></script>
 
 </html>
