@@ -157,45 +157,66 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
     --level-4: #f27c8d;
     --black: #bbbbbb;
   }
-  
-  .rectangle {position: relative;text-align: center; width: 162px; height: 48px; border-radius: 5px; line-height: 48px; color: var(--white_color);}
-  .ball {position: relative; text-align: center; width: 200px; height: 110px; border-radius: 45px; line-height: 110px; border: 1px solid red;}
+  .organization {margin-top: -1px; padding-bottom: 1px;}
+  .font14 {font-size: 14px; display: inline;}
+  .flex {display: flex; gap: 41px; position: relative;}
+  .rectangle {position: relative; text-align: center; width: 162px; height: 45px; border-radius: 5px; line-height: 45px; color: var(--white_color);}
+  .ball {position: relative; text-align: center; width: 202px; height: 112px; border-radius: 45px; line-height: 110px; border: 2px solid; background-color: #fff;}
   .level-1 {margin: 0 auto 45px; background: var(--level-1); font-weight: bold;}
-  .level-1::before {content: "";position: absolute;top: 100%;left: 50%;transform: translateX(-50%); width: 2px; height: 68px; background: var(--black);}
-  .last_level1::before {height: 258px;}
-  .level-2-wrapper {position: relative; display: grid; grid-template-columns: repeat(2, 1fr);}
-  .level-2-wrapper li { position: relative; }
+  .level-1::before {content: ""; position: absolute; top: 100%; left: 50%;transform: translateX(-50%); width: 1px; height: 68px; background: var(--black);}
+  .last_level1::before {height: 202px;}
+  .level-2-wrapper {position: relative; display: grid; grid-template-columns: repeat(2, 340px); justify-content: center;}
+  .level-2-wrapper li { position: relative;}
   .level-2-wrapper > li::before {display: none;}
-  .level-2-wrapper > li::after {content: ""; position: absolute; top: 25%; right: 0; width: 50%; transform: translate(0, -25%); height: 2px; background: var(--black); z-index: 0;}  
+  .level-2-wrapper > li::after {content: ""; position: absolute; top: 33%; right: 0; width: calc(100% - 162px); transform: translate(0, -33%); height: 1px; background: var(--black); z-index: 0;}  
   .level-2-wrapper > li.reverse::after {left: 0;}
-  .level-2 { margin: 0 auto 45px; background: var(--level-2); color: var(--main_color);}
+  .level-2 { margin: 0 0 20px 0; background: var(--level-2); color: var(--main_color);}
   .level-2-wrapper li:last-child {grid-column: 2 / 3;}
-  .level-3-wrapper {position: relative; display: flex; width: 90%; margin: 0 auto; justify-content: space-between;}
-  .level-3-wrapper::before { content: ""; position: absolute; top: -20px; left: 50%; right: 0; 
-    transform: translate(-50%, 0);
-    width: calc(100% - 200px);
-    height: 2px;
-    background: var(--black);
-  }
-  
-  .level-3-wrapper > li::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 2px;
-    height: 20px;
-    background: var(--black);
-  }
-  .flex {display: flex; gap: 50px;}
-  .level-3 {
-    margin-bottom: 20px;
-    background-color: #0070c0;
-    
-  }
-  .level-4-wrapper {background-color: #000000;}
-  
+  .level-2-wrapper li:last-child::after {top: 34%;}
+  .reverse p {margin: 0 0 20px auto;}
+  .level-3-wrapper {position: relative; display: flex; margin: 60px auto; justify-content: flex-end;}
+  .level-3-wrapper::before { content: ""; position: absolute; top: -35px; right: 104px; width: 958px; height: 1px; background: var(--black);}
+  .level-3-wrapper > li > div:first-child {margin-bottom: 34px;}
+  .level-3-wrapper > li > div::before { content: ""; position: absolute; top: -37px; width: 1px; height: 35px; background: var(--black); left: 50%;}
+  .level-3-wrapper > li > div::after { content: ""; position: absolute; bottom: -37px; width: 1px; height: 35px; background: var(--black); left: 50%;}
+  .level-3-wrapper > li > div > span {font-size: 16px; color: #555555; display: inline; line-height: 1.1; font-weight: 400;}
+  .level-3-wrapper > li > div {font-size:var(--font-size-md); font-weight: bold; display: inline-flex; line-height: 1; flex-direction: column; justify-content: center; gap: 15px;}
+  .level-3-wrapper > li:last-child {width: 202px; margin-right: 3px; margin-left: 111px;}
+  .level-3-last {display: flex; flex-direction: column; align-items: center;}
+  .level-3-last .level-5 {margin-bottom: 10px; background-color: #dee6d2;}
+  .level-3-last .level-5::before {display: none;}
+  .level-3-last .level-5::after { content: ""; position: absolute; bottom: -10px; width: 1px; height: 10px; background: var(--black); left: calc(50% + 2px);}
+  .level-3-last .level-5:last-child::after {display: none;}
+  .level-3-2 > div::after {display: none;}
+  .level-3-2 {width: 425px; margin-left: 134px;}
+  .level-3-2 .level-4 {background-color: #47b77f;}
+  .level-3-2 .level-5 {background-color: #daf1e5;}
+  .level-3-1 .level-4 {background-color: #9ecd29;}
+  .level-3-1 .level-5 {background-color: #ecf5d4;}
+  .level-3-1 > div {border-color: #9ecd29; color:#9ecd29; margin-left: 115px;}
+  .level-3-2 > div {border-color: #47b77f; color:#47b77f;}
+  .level-3-last > div {border-color: #588320; color:#588320;}
+  .level-3-wrapper .level-3-1 .curve::before {height: 34px;}
+  .level-3-wrapper .level-3-1 > div::after {height: 30px; bottom: -30px;}
+  .level-4-wrapper {display: flex; flex-direction: column; gap: 36px;}
+  .level-4-wrapper > li {align-items: center; justify-content: flex-end;}
+  .level-4-wrapper > li > p {margin-bottom: -2px;}
+  .level-3-1 .level-4-wrapper > li > p {margin-top: 0px; margin-bottom: 0;}
+  .level-5 {color: var(--main_color); margin: 0 auto 10px; background: var(--level-1); font-weight: 400; width: 200px; position: relative;}
+  .level-5::before { content: ""; position: absolute; top: 50%; width: 20px; height: 1px; background: var(--black); left: -20px; transform: translateY(-50%);}
+  .level-5:last-child {margin-bottom: 0;}
+  .flex ol p {line-height: 44px;}
+  .flex ol {position: relative;}
+  .flex ol::before {content: ""; position: absolute; top: 50%; width: 1px; height: 56px; background: var(--black); left: -21px; transform: translateY(-50%);}
+  .level-4 {color: var(--white_color); font-weight: bold; position: relative;}
+  .level-4::after { content: ""; position: absolute; top: calc(50% - 1px); width: 21px; height: 1px; background: var(--black); right: -21px;}
+  .level-4:before { content: ""; position: absolute; bottom: 45px; width: 1px; background: var(--black); left: calc(50% - 1px); z-index: -1;}
+  .level-3-1 .level-4:before {height: 80px;}
+  .level-3-2 .level-4:before {height: 91px;}
+  .level-3-1 > ol {position: relative; margin-top: 28px;}
+  .level-3-1 > ol::before { content: ""; position: absolute; top: -34px; width: 136px; height: 1px; background: var(--black); left: 81px;}
+  .level-3-1 .level-4-wrapper {gap: 35px;}
+  .level-3-1 .flex .uprectangle {margin-top: -2px;}
 /* 01_04_organization_end */
 
 /* 02_01_facility_start */
@@ -310,7 +331,7 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
 .green_color.base {margin-top: 19px; line-height: 1;}
 .green_color.base + h3 {line-height: 0.7;}
 li {position: relative;}
-li::before {content: url(/assets/imgs/sub/disc_sq.png); position: absolute; left: 6px; top: -5px;}
+ul li::before {content: url(/assets/imgs/sub/disc_sq.png); position: absolute; left: 6px; top: -5px;}
 .elderly_insurance {margin-top: 54px;}
 .elderly_insurance li {line-height: 36px; padding-left: 30px;}
 .elderly_insurance li span {font-weight: bold; width: 108px; display: inline-block;}
@@ -499,4 +520,4 @@ select::after {content: url(/assets/imgs/sub/chevron-down-solid.png); width: 10p
 .care_item:nth-child(3) .care_circle span {color: #ffc53b;}
 .care_item:nth-child(4) .care_circle {border-color: #9ecd29;}
 .care_item:nth-child(4) .care_circle span {color: #9ecd29;}
-/* 05_05_04_recruitment_end */
+/* 05_05_04_recruitment_end */ 
