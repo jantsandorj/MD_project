@@ -28,7 +28,7 @@
 /* common */
 .head {position: fixed; top: 0;}
 .sub_banner {min-height: 500px; position: relative; width: 100%; background-color: #22222280; margin-top: 101px;}
-.sub_banner img {width: 100%; height: 100%; position: absolute; z-index: -1;}
+.sub_banner img {width: 100%; height: 100%; position: absolute; z-index: -1; object-fit: cover;}
 .sub_banner_text {display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 495px;}  
 .sub_banner h1 {font-size: var(--font-size-xxl); color: var(--white_color); font-weight: bold; text-align: center; letter-spacing: -0.05em; margin-bottom: 29px; line-height: 66px;}
 .sub_banner h3 {font-size: var(--font-size-md); color: var(--white_color); font-weight: 400; text-align: center; letter-spacing: -0.05em; line-height: 30px;}
@@ -229,11 +229,12 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
 .facility_item h4:last-of-type {margin-top: 98px;}
 .facility_item p {font-size: var(--font-size-base); font-weight: 400; letter-spacing: -0.025em; line-height: 26px; margin-top: 15px;}
 .facility_grid {display: grid; gap: 30px; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(2, 400px); }
-.facility_grid img:nth-child(1) {grid-column: 1 / span 2;}
-.facility_grid img:nth-child(2) {grid-column: 3 / span 2;}
-.facility_grid img:nth-child(3) {grid-column: 1 / span 2;}
-.facility_grid img:nth-child(4) {grid-column: 3 / span 1;}
-.facility_grid img:nth-child(5) {grid-column: 4 / span 1;}
+.facility_grid .img_wrap {width: 100%; height: 100%;}
+.facility_grid .img_wrap:nth-child(1) {grid-column: 1 / span 2;}
+.facility_grid .img_wrap:nth-child(2) {grid-column: 3 / span 2;}
+.facility_grid .img_wrap:nth-child(3) {grid-column: 1 / span 2;}
+.facility_grid .img_wrap:nth-child(4) {grid-column: 3 / span 1;}
+.facility_grid .img_wrap:nth-child(5) {grid-column: 4 / span 1;}
 .facility_grid, .facility_flex {margin-top: 26px;}
 .facility_flex {display: flex; flex-wrap: wrap; gap: 30px; overflow: hidden;}
 .facility_flex > img {height: 400px;}
@@ -290,13 +291,13 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
 .circle_fee:nth-child(even) {background: url(/assets/imgs/sub/fee1_2.png) center center/cover; }
 .circle_fee p {line-height: 26px; padding-top: 20px;}
 .circle_fee p span {color: var(--gray_color);}
-.circle_fee .img_wrap {position: relative; height: 50%; flex-grow: 0; width: 100%; top: 0;}
+.circle_fee .icon_wrap {position: relative; height: 50%; flex-grow: 0; width: 100%; top: 0;}
 .circle_fee img {position: absolute; bottom: 3px; left: 50%; transform: translateX(-50%);}
 /* 03_02_fee_end */
 
 /* 03_03_consulation_start */
 .consultion {margin-top: -4px;padding-bottom: 61px;}
-.form_desc {font-size: 16px; font-weight: 400; letter-spacing: -0.025em; line-height: 24px;}
+.form_desc {font-size: var(--font-size-extrasm); font-weight: 400; letter-spacing: -0.025em; line-height: 24px;}
 .consultion .b_btn {background-color: var(--green); width: 400px; height: 60px; border: 1px solid var(--green); font-size: var(--font-size-extrabase);}
 .consultion .btn_wrap {display: flex; justify-content: center; margin-top: 109px;}
 .consultion .btn_wrap .b_btn span {color: var(--white_color); font-weight: 600; letter-spacing: 0;}
@@ -309,7 +310,7 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
 .consule_form > div:nth-child(3) > label {line-height: 160px;}
 .consule_form > div:nth-child(3) > input {height: 126px; margin: -1px 16px 0 0; flex: 1;}
 .consultion .chk_wrap {margin-top: 30px; display: flex; align-items: center; position: relative;}
-.chck_wrp {display: block; position: relative; padding-left: 69px; cursor: pointer; font-size: 16px; font-weight: 400; letter-spacing: -0.025em; margin-top: 38px; border-bottom: 1px solid #dddddd; padding-bottom: 18px;}
+.chck_wrp {display: block; position: relative; padding-left: 69px; cursor: pointer; font-size: var(--font-size-extrasm); font-weight: 400; letter-spacing: -0.025em; margin-top: 38px; border-bottom: 1px solid #dddddd; padding-bottom: 18px;}
 .chck_wrp input {position: absolute;opacity: 0; cursor: pointer; height: 0; width: 0;}
 .checkmark {position: absolute; top: -1px; left: 43px; height: 20px; width: 20px; background-color: #fff; border: 1px solid #999999; border-radius: 2px;}
 .chck_wrp input:checked ~ .checkmark {background-color: var(--green);}
@@ -372,9 +373,9 @@ colgroup col:last-child {border: 0;}
 .medical, .support, .treatment {margin-top: -5px; padding-bottom: 59px;}
 .flex_reverse_list {display: flex; flex-direction: column; margin-top: 100px;}
 .flex_reverse {display: flex; margin-bottom: 1px;}
-.flex_reverse > * {flex: 1;}
-.flex_reverse > img {width: 100%; aspect-ratio: 640 / 361; height: auto; position: relative; display: inline-block;}
-.flex_reverse > img::after {position: absolute; content: ""; width: 100px; height: 100px; background-color: #0000001a; top: 0; left: 0;}
+.flex_reverse > * {flex: 2 0 50%;}
+.flex_reverse img { aspect-ratio: 640 / 361; height: auto; position: relative; display: inline-block; width: 100%;}
+.flex_reverse img::after {position: absolute; content: ""; width: 100px; height: 100px; background-color: #0000001a; top: 0; left: 0;}
 .flex_reverse:nth-child(even) {flex-direction: row-reverse;}
 .flex_txt_wrap {padding-left: 60px; display: flex; flex-direction: column; justify-content: center; gap: 31px; padding-bottom: 20px;} 
 .flex_txt_wrap p {font-size: var(--font-size-lg); font-weight: bold; line-height: 0.3;}

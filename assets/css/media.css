@@ -6,18 +6,192 @@
     순서:    Header(menu)> Sub Page > Main top(banner) > Footer > Aside
 -------------------------------------------------------------------*/
 
+@media screen and (max-width: 1700px) {
+    .header_inn .logo {left: 50px;}
+    .gnb.container {max-width: 900px; margin-right: 0; right: 50px;}
+    .footer .container {margin-left: 50px; margin-right: 50px;}
+    .img_wrap img {width: 100%; height: 100%; object-fit: cover;}
+    .conts3 {padding: 50px;}
+    .banner {aspect-ratio: 1900/700; width: 100%; height: auto;}
+    .wrap .sub_banner {aspect-ratio: 1900/700; width: 100%; height: auto; min-height: auto;}
+    .sub_banner .sub_banner_text {height: 100%; min-height: auto;}
+}
+@media screen and (max-width: 1400px) {
+    .conts .container {margin-left: 50px; margin-right: 50px;}
+    .conts.container {margin-left: 50px; margin-right: 50px;}
+    .facility_item .facility_grid {grid-template-rows: repeat(2, auto);}
+    .facility_flex {justify-content: space-between;}
+    .facility_flex > * {width: calc((100% - 30px) / 2); height: auto; }
+    .pre_img_inn > img {width: 49%; aspect-ratio: 300/150; height: auto; object-fit: cover; }
+    .values .values_card > span {font-size: clamp(24.41px, 1.69vw + 20.18px, 48px);}
+    .values .values_card {height: auto;}
+    .notice_write .ann_title > input {width: 60%;}
+}
 @media screen and (max-width: 1300.98px) {
-
+    .inn_yt {aspect-ratio: 16/9; width: 60%; height: auto;}
+    .grid_gallery {grid-template-rows: repeat(2, 220px )}
+    .header_inn .gnb > ul {gap: 20px; justify-content: flex-end;}
+    .header_inn .gnb > ul > li {width: max-content; padding: 0 10px;}
+    .header_inn .gnb > ul > li > a {padding: 0 10px;}
+    .conts1 .greetings, .inn .values > div, .conts.insurance .flex_list  {gap: 50px;}
+    .dir_conts1 > div > span {width: 140px; flex-shrink: 0;}
+    .dir_conts1 .content_container {gap: 0;}
+    .content_container .container_1000 {max-width: auto}
+    .facility_item .facility_flex > img {height: auto;}
+    .conts .procedure .flex_item > .img_wrap {height: 120px;}
+    .circle_icon .circle_fee .icon_wrap {width: 25%; height: 40%;}
+    .icon_wrap img {width: 100%; height: auto; aspect-ratio: 1/1;}
+    .circle_fee:nth-child(2) .icon_wrap img {width: 100%; height: auto; aspect-ratio: 103/80;}
+    .conts.insurance .flex_item::after,
+    .conts.job_info .flex_item::after {transform: translate(35px, -50%) scale(0.6);}
+    .criteria colgroup col, .job_list_table colgroup col,
+    .notice_table colgroup col {width: auto;}
+    .criteria tbody tr :nth-child(1) {padding: 0 10px; }
+    .criteria tbody tr td:nth-child(2) {padding-left: 40px;}
+    .flex_reverse .flex_txt_wrap {padding-left: 30px;}
+    .conts.job_info .flex_list {gap: 40px;}   
+    aside.floating {width: 85px; height: auto; top: 200px; right: 50px;}
+    .inn ul > li > span {font-size:clamp(11px, 0.77vw + 10.57px, 20px) ;}
 }
 @media screen and (max-width: 1000.98px) {
-
+    aside.floating {transform: translateX(200px);}
+    /* .header_inn .gnb {display: none;} */
+    .header_inn .button {display: block;}
+    .banner {min-height: 400px;}
+    .banner_text, .gr_top .greeting_ttl, .flex_reverse .flex_txt_wrap li,
+    .conts.support .flex_txt_wrap p {line-height: 1.5;}
+    .youtube {flex-direction: column; gap: 50px}
+    .inn_yt {width: 100%;}
+    .yt_title {max-width: none; text-align: center;}
+    .grid_gallery {display: flex; flex-wrap: wrap;}
+    .grid_gallery .gallery_item {width: 100%; aspect-ratio: 16/9; height: auto;}
+    .conts4 .inn {flex-direction: column; max-height: none;}
+    .yt_title a {margin-top: 20px; margin-left: auto; text-align: end; display: block;}
+    .conts1 .greetings {flex-direction: column;}
+    .greetings .greetings_txt {max-width: none;}
+    .facility_gallery .facility_item, .target .procedure,
+    .target .prepare, .conts.consultion .btn_wrap, 
+    .insurance .insure_step > h3, .conts2, .conts.job_info h3 {margin-top: 80px;}
+    .circle_icon .circle_fee p {line-height: 1.5; padding-top: 5px;}
+    .consultion .consule_form > div {height: 50px;}
+    .consultion .consule_form > div > label {width: 150px; line-height: 50px;}
+    .consultion .consule_form > div > input {height: auto;}
+    label .checkmark {width: 15px; aspect-ratio: 1/1; height: auto;}
+    .conts.insurance .flex_list {flex-wrap: wrap;}
+    .conts.insurance .flex_list > .flex_item {width: 40%; flex: auto;}
+    .insurance .flex_item:nth-child(2)::after{display: none;}
+    .insurance tbody tr {height: 60px !important;}
+    .benefit colgroup col{ width: auto;}
+    .benefit thead tr th:nth-child(1) {padding: 0 10px; width: 20%;}
+    .flex_reverse .flex_txt_wrap {gap: 20px!important;}
+    .conts.job_info .flex_list {flex-wrap: wrap;}
+    .conts.job_info .flex_list > div {flex: none; width: 25%;}
+    .conts.job_info .flex_item span + p {line-height: 1.5; margin-top: 15px;}
+    .conts.job_info .flex_item:nth-child(3)::after {display: none;}
+    .conts .job_table tbody tr {height: 60px!important; line-height: 1.5;}
+    .conts4 .announcement .ann_list > li {height: 50px;}
+    .notice_detail .dtl_head {height: 60px;}
 }
 @media screen and (max-width: 767.98px) {
-
+    .conts .container {margin-left: 20px; margin-right: 20px;}
+    .conts.container {margin-left: 20px; margin-right: 20px;}
+    .conts .conts2 .inn ul li {padding: 20px 0; height: auto; gap: 10px;}
+    .conts3, .conts4 .inn {margin-top: 50px;}
+    .conts4 .inn {gap: 50px;}
+    .ann_list {padding-bottom: 0;}
+    .greetings .greetings_txt, .insurance .benefit p {padding-top: 0;}
+    .inn .values > div {gap: 20px;}
+    .circle_diagram .circle1 {width: calc((100% - 51px) / 2);}
+    .inn .mission > img {width: 100%}
+    .happy .spell p:last-of-type {line-height: 1.5; text-align: center;}
+    .mission .happy, .vision_cont .vision, .vision_cont .values,
+    .directions .dir > h4, .facility_gallery .facility_item, .insurance .insure_step > h3,
+    .conts .flex_reverse_list, .recruitment .care_flex, .conts.recruitment .b_btn,
+    .conts.job_info h3, .target .procedure .flex_list {margin-top: 50px;}
+    .directions .dir_conts1, .job_info .rec_inquiry {margin-top: 0;}
+    .dir_conts1 > div > span,.directions .dir_conts2 > div > span {width: 100px;}
+    .container_1000 .dir_step > p, .job_info .green_icon + p,  .job_info .volunteer,
+    .job_info .vol_quali, .job_info .participate_vol, .job_info .rec_policy, .job_info .job_table {margin-top: 20px;}
+    .directions .dir_step:nth-child(3) > .img_wrap {margin-bottom: 0;}
+    .flex_1000 .flex_1000_item p:first-child {width: 50%;}
+    .flex_1000 {flex: 1;}
+    .flex_1000 .flex_1000_item span + p {margin-right: 5px; margin-left: 5px;}
+    .prepare .pre_inn > div{flex: none;}
+    .pre_inn .list_wrapper {width: 60%;}
+    .pre_img_wrap {width: 35%;}
+    .pre_img_inn > img {width: 100%;}
+    .pre_inn .pre_list_item li {line-height: 2!important;}
+    .consultion .consule_form > div > label {width: 100px;}
+    .insurance .insure_ttl p {padding: 0 10px; height: 35px;}
+    .insurance .elderly_insurance li span {width: 50px;}
+    .insurance .elderly_insurance li, .conts.recruitment > h3 {line-height: 2;}
+    .insurance .elderly_insurance, .insurance .feature_elderly + p, .conts.insurance .flex_list {margin-top: 20px;}
+    .flex_reverse .flex_txt_wrap {padding-left: 20px;}
+    .care_flex .care_item {gap: 10px;}
+    .care_item .care_circle {max-width: 43%;}
+    .care_item .care_circle img {padding-left: 30px;}
+    .conts.job_info h3 {gap: 5px; padding: 0 5px;}
+    .conts.job_info .flex_list {row-gap: 20px;}
+    .job_table colgroup col {width: auto;}
+    .job_table colgroup col:nth-child(1) {width: 80px;}
+    .conts .job_table tbody tr td:last-child {padding-left: 20px;}
 }
 @media screen and (max-width: 575.98px) {
-
+.conts1 .inn ul > li > img {width: 70%;}
+.conts1 .inn ul > li {gap: 5px;}
+.conts1 {height: auto;}
+.conts1 .inn {display: flex; align-items: center;}
+.yt_title p {line-height: 1.5;}
+.conts2 .inn ul li img {transform: scale(0.8);}
+.conts3 {padding: 20px;}
+.gallery_item:nth-child(1) p {line-height: 2;}
+.footer .footer_inn {gap: 20px; flex-direction: column; padding: 30px 0px;}
+.footer_inn .footer_info p {line-height: 1.5;}
+.mission .happy {flex-wrap: wrap; row-gap: 20px; justify-content: center;}
+.happy .spell {width: 26%;}
+.vision .circle_diagram > img {width: 150px;}
+.dir_conts1 .content_container {flex-direction: column; gap: 20px;}
+.dir_conts2 > div {flex-direction: column; gap: 20px;}
+.facility_item .facility_grid {display: flex; flex-direction: column;}
+.facility_grid .img_wrap img {width: 100%; aspect-ratio: 16/9; height: auto;}
+.facility_flex {flex-direction: column;}
+.facility_flex > * {width: 100%;}
+.target .procedure .flex_list {flex-direction: column; align-items: center; gap: 20px;}
+.procedure .flex_item span::after {display: none;}
+.procedure .flex_item span::before {display: none;}
+.pre_img_wrap {display: none;}
+.pre_inn .list_wrapper {width: 100%;}
+.circle_icon {flex-direction: column; width: 50%; margin: auto;}
+.circle_icon .circle_fee {transform: rotate(90deg); width: 100%; height: 100%; flex-direction: row;}
+.circle_fee > * {transform: rotate(-90deg);}
+.circle_icon .circle_fee p {padding-top: 50px;}
+.circle_icon .circle_fee .icon_wrap {height: 60%;}
+.consultion .consule_form > div > label {width: 25%;}
+.consule_form > div > input {flex: 1; margin-right: 16px;}
+.criteria thead tr th:nth-child(1) {width: 10%;}
+.criteria tbody tr :nth-child(1) {padding: 0;}
+.criteria tbody tr td:nth-child(2) {padding-left: 10px;}
+.insure_list_criteria.benefit tbody tr td:nth-child(2) {line-height: 1.5;}
+.insure_ttl {flex-direction: column;}
+.insurance .insure_ttl p {margin-right: 0;}
+.care_item .care_circle {min-height: 90px;}
+.care_item .care_circle img {width: 35%;}
+.care_item .care_txt p {line-height: 1;}
+.care_flex .care_item > p {line-height: 1.5;}
+.job_table colgroup col:nth-child(2) {width: 100px;}
+.conts .job_table tbody tr {height: 45px!important;}
+.job_info .green_icon {font-size: 17px;}
+.job_info .green_icon::before {top: 4px;}
 }
 @media screen and (max-width: 483px) {
-
+    .banner_text {left:50px; max-width: 100%;} 
+    .gallery_item p {line-height: 1.5;}
+    .conts2 .inn ul {flex-wrap: wrap; width: 100%;}
+    .conts .conts2 .inn ul li {width: 50%; flex-shrink: 0; flex: none;}
+    .circle_diagram .circle p {line-height: 1.5;}
+    .vision .circle_diagram > img {width: 120px; margin-top: 30px;}
+    .conts.job_info .green_icon {line-height: 1.5;}
+    .circle_diagram .circle h4 {padding-bottom: 0;}
+    .conts.job_info li {padding-left: 20px; line-height: 2;}
+    .job_table colgroup col:nth-child(1) {width: 50px;}
 }
