@@ -32,6 +32,7 @@
 .sub_banner_text {display: flex; align-items: center; flex-direction: column; justify-content: center; min-height: 495px;}  
 .sub_banner h1 {font-size: var(--font-size-xxl); color: var(--white_color); font-weight: bold; text-align: center; letter-spacing: -0.05em; margin-bottom: 29px; line-height: 66px;}
 .sub_banner h3 {font-size: var(--font-size-md); color: var(--white_color); font-weight: 400; text-align: center; letter-spacing: -0.05em; line-height: 30px;}
+nav ul li::before {display: none;}
 
 .sub_menu {height: 72px; border-bottom: 2px solid #efefef; margin-bottom: 140px;}
 .sub_menu ul {display: flex; align-items: center; justify-content: center; height: 100%;}
@@ -55,7 +56,7 @@ h4 {font-size: var(--font-size-lg); font-weight: bold;}
 .paging_prev::after {content: url(/assets/imgs/sub/page2.png); width: 16px; display: block;}
 .paging_next::after {content: url(/assets/imgs/sub/page3.png); width: 16px; display: flex; justify-content: end;}
 .paging_end::after {content: url(/assets/imgs/sub/page4.png);}
-.paging_number {width: 33px; height: 33px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 500; color: #bbbbbb; }
+.paging_number {width: 33px; height: 33px; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-base); font-weight: 500; color: #bbbbbb; }
 
 .b_btn {background-color: var(--green); color: var(--white_color); font-weight: 500; width: 120px; height: 45px; font-size: var(--font-size-base);}
 .b_btn.outline {background-color: white; border: 1px solid #bbbbbb; color: var(--gray_color);}
@@ -396,7 +397,8 @@ select option {font-size: var(--font-size-extrasm); font-weight: 400; letter-spa
 input:active, select:active, input:focus, select:focus {border: 1px solid #222222;} 
 .filter {display: flex; gap: 10px; justify-content: flex-end;}
 .filter select {width: 130px; height: 40px; padding: 0 11px; display: inline-flex; position: relative; font-weight: 400;}
-select::after {content: url(/assets/imgs/sub/chevron-down-solid.png); width: 10px; height: 10px; display: block; position: absolute; }
+.filter .select_wrap::after { content: url(/assets/imgs/sub/chevron-down-solid.png); position: absolute; top: 50%; right: 11px; transform: translateY(-50%); }
+.filter .select_wrap {position: relative;}
 .search_wrap {display: flex; width: auto;}
 #search {width: 218px;}
 .search_wrap button {width: 80px; background-color: #555555; color: var(--white_color); font-size: var(--font-size-extrasm); font-weight: 400; letter-spacing: -0.025em;}

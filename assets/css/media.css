@@ -26,7 +26,30 @@
     .values .values_card > span {font-size: clamp(24.41px, 1.69vw + 20.18px, 48px);}
     .values .values_card {height: auto;}
     .notice_write .ann_title > input {width: 60%;}
-}
+    .wrap .sub_menu a {font-size: clamp(10px, 0.57vw + 7.71px, 18px);}
+    .organization .level-2-wrapper {grid-template-columns: repeat(2, 25%);}
+    .organization .rectangle {width: 140px; font-size: clamp(10px, 0.5vw + 6.48px, 14px); height: 35px; line-height: 35px;}
+    .organization .level-2-wrapper > li::after {width: calc(100% - 140px); z-index: -1; }
+    .organization .level-1 {margin-bottom: 20px;}
+    .organization .level-1::before {height: 20px;}
+    .organization .last_level1::before {height: 125px;}
+    .organization .level-3-wrapper > li:last-child {margin-left: auto; width: auto;}
+    .organization .level-3-2 {margin:0; width: auto;}
+    .organization .level-3-wrapper::before {width: calc(100% - 162px); left: 80px;}
+    .organization .level-3-wrapper {margin: 30px 0;}
+    .organization .level-3-1 {margin-right: auto;}
+    .organization .level-3-1 > div {margin-left: auto;}
+    .level-3.ball {width: 160px;}
+    .organization .level-3-wrapper > li > div {font-size: clamp(10px, 0.57vw + 7.71px, 18px); gap: 10px; height: 80px; margin-bottom: 28px!important;}
+    .organization .level-3-wrapper > li > div > span {font-size: clamp(9px, 0.48vw + 6px, 15px);}
+    .organization .font14 {font-size: clamp(8px, 0.38vw + 6.48px, 13.33px);}
+    .organization .level-3-1 > ol {margin-top: 0;}
+    .organization .level-3-1 > ol::before {display: none;}
+    .organization .level-4-wrapper {gap: 20px!important; margin-left: 10px;}
+    .organization .level-4:before {bottom: 30px;}
+    .organization .level-3-1 > div::after {display: none;}
+    .organization .flex ol::before {height: 45px;}
+}   
 @media screen and (max-width: 1300.98px) {
     .inn_yt {aspect-ratio: 16/9; width: 60%; height: auto;}
     .grid_gallery {grid-template-rows: repeat(2, 220px )}
@@ -52,11 +75,21 @@
     .conts.job_info .flex_list {gap: 40px;}   
     aside.floating {width: 85px; height: auto; top: 200px; right: 50px;}
     .inn ul > li > span {font-size:clamp(11px, 0.77vw + 10.57px, 20px) ;}
+    .job_dtl_cont2 .job_form .input_wrap label, .job_dtl_cont1 .row p:first-child {width: 150px;}
+    .notice_detail .filename_wrap p {font-size: clamp(9px, 0.5vw + 6.48px, 14px);}
+    .notice_detail .filename_wrap span {font-size: clamp(8px, 0.4vw + 6.48px, 12px);;}
 }
 @media screen and (max-width: 1000.98px) {
     aside.floating {transform: translateX(200px);}
-    /* .header_inn .gnb {display: none;} */
+    .job_detail .job_dtl_cont1 > p {line-height: 2;}
+    .header_inn .gnb {display: none;}
     .header_inn .button {display: block;}
+    .wrap .head {max-height: 80px; min-height: auto; height: 100%;}
+    .head .header_inn {max-height: 80px; min-height: auto; height: 100%;}
+    .header_inn .logo {transform: scale(0.7); top: 5px; left: 0;}
+    .footer .footer_inn a {transform: scale(0.7); padding-top: 0; position: relative; left: 0px;}
+    .wrap .sub_banner {margin-top: 80px;}
+    .wrap .popup_phone {margin-bottom: 80px;}
     .banner {min-height: 400px;}
     .banner_text, .gr_top .greeting_ttl, .flex_reverse .flex_txt_wrap li,
     .conts.support .flex_txt_wrap p {line-height: 1.5;}
@@ -71,7 +104,9 @@
     .greetings .greetings_txt {max-width: none;}
     .facility_gallery .facility_item, .target .procedure,
     .target .prepare, .conts.consultion .btn_wrap, 
-    .insurance .insure_step > h3, .conts2, .conts.job_info h3 {margin-top: 80px;}
+    .insurance .insure_step > h3, .conts2, .conts.job_info h3,
+    footer.footer {margin-top: 80px;}
+    .wrap .sub_menu {margin-bottom: 80px;}
     .circle_icon .circle_fee p {line-height: 1.5; padding-top: 5px;}
     .consultion .consule_form > div {height: 50px;}
     .consultion .consule_form > div > label {width: 150px; line-height: 50px;}
@@ -84,17 +119,42 @@
     .benefit colgroup col{ width: auto;}
     .benefit thead tr th:nth-child(1) {padding: 0 10px; width: 20%;}
     .flex_reverse .flex_txt_wrap {gap: 20px!important;}
-    .conts.job_info .flex_list {flex-wrap: wrap;}
+    .conts.job_info .flex_list {flex-wrap: wrap; justify-content: center;} 
     .conts.job_info .flex_list > div {flex: none; width: 25%;}
     .conts.job_info .flex_item span + p {line-height: 1.5; margin-top: 15px;}
     .conts.job_info .flex_item:nth-child(3)::after {display: none;}
     .conts .job_table tbody tr {height: 60px!important; line-height: 1.5;}
     .conts4 .announcement .ann_list > li {height: 50px;}
     .notice_detail .dtl_head {height: 60px;}
+    .input_wrap .inputs {flex-direction: column; flex: 1; margin: 16px; gap: 16px;}
+    .inputs .spacer {display: none;}
+    .input_wrap .inputs input {width: 100%; margin: 0;}
+    .job_form .input_wrap:last-child {height: auto;}
+    .job_dtl_cont2 .job_form {flex-direction: column; gap:10px}
+    .job_dtl_cont2 .job_form .b_btn.outline {width: auto; height: auto; padding: 10px 30px; margin-bottom: 10px;}
+    .conts.job_detail .write {margin-top: 20px;}
+    .conts .job_form form {width: 100%;}
+    .job_dtl_cont2 .job_form .input_wrap:first-child input {width: auto; flex: 1;}
+    .organization .level-2-wrapper > li::after {width: calc(100% - 120px);}
+    .organization .level-4::after {width: 11px; right:-11px;}
+    .organization .flex {gap: 20px;}
+    .organization .flex ol::before {left: -10px;}
+    .organization .level-5::before {width: 10px; left: -10px;}
+    .organization .rectangle {width: 130px;}
+    .level-4.rectangle {width: 70px;}
+    .level-3.ball {width: 140px;}
+    .organization .level-3-wrapper::before {width: calc(100% - 142px); left: 70px;}
+    .organization .level-4-wrapper {margin-left: 35px;}
+    .organization .level-3-last .level-5.rectangle {width: 110px;}
 }
 @media screen and (max-width: 767.98px) {
+    .popup_phone {justify-content: flex-start; padding-left: 20px;}
+    .close_head {bottom: 0;}
+    .wrap .sub_banner {min-height: 300px;}
+    .wrap .sub_banner h1 {margin-bottom: 0;}
     .conts .container {margin-left: 20px; margin-right: 20px;}
     .conts.container {margin-left: 20px; margin-right: 20px;}
+    .footer .container {margin-left: 20px; margin-right: 20px;}
     .conts .conts2 .inn ul li {padding: 20px 0; height: auto; gap: 10px;}
     .conts3, .conts4 .inn {margin-top: 50px;}
     .conts4 .inn {gap: 50px;}
@@ -107,7 +167,9 @@
     .mission .happy, .vision_cont .vision, .vision_cont .values,
     .directions .dir > h4, .facility_gallery .facility_item, .insurance .insure_step > h3,
     .conts .flex_reverse_list, .recruitment .care_flex, .conts.recruitment .b_btn,
-    .conts.job_info h3, .target .procedure .flex_list {margin-top: 50px;}
+    .conts.job_info h3, .target .procedure .flex_list, .directions .map_wrap,
+    .target .procedure, .target .prepare {margin-top: 50px;}
+    .wrap .sub_menu {margin-bottom: 50px;}
     .directions .dir_conts1, .job_info .rec_inquiry {margin-top: 0;}
     .dir_conts1 > div > span,.directions .dir_conts2 > div > span {width: 100px;}
     .container_1000 .dir_step > p, .job_info .green_icon + p,  .job_info .volunteer,
@@ -135,17 +197,34 @@
     .job_table colgroup col {width: auto;}
     .job_table colgroup col:nth-child(1) {width: 80px;}
     .conts .job_table tbody tr td:last-child {padding-left: 20px;}
+    .organization .level-3-wrapper::before {width: calc(50% - 50px); left: 50px;}
+    .organization .level-3-wrapper {flex-direction: column; gap: 30px;}
+    .level-3-wrapper > li {margin-left: 100px!important;}
+    .organization .level-3-wrapper > li {display: flex;}
+    .organization .level-3-wrapper > li:last-child {align-items: flex-start;}
+    .organization .level-3-wrapper::after {content: ""; position: absolute; top: -35px; width: 1px; height: calc(100% - 72px); background: var(--black); left: 50px;}
+    .organization .level-3-wrapper > li > div::before {content: ""; position: absolute; top: 50%; width: calc(100% + 101px); height: 1px; background: var(--black); left: -51px; z-index: -1;}
+    .organization .level-4-wrapper {margin-left: 48px;}
+    .organization .level-3-1 > ol {margin-top: 24px;}
+    .organization .level-4-wrapper > li:first-child > p:first-child::before {height: 0;}
+    .organization .level-3-last > div::after {display: none;}
+    .organization .level-3-last > p {margin-left: 185px;}
+    .rectangle.lastrect {margin-top: -85px;}
+    .organization .level-2-wrapper {grid-template-columns: repeat(2, 40%);}
+    .organization .level-2-wrapper > li::after {width: calc(100% - 100px);}
 }
 @media screen and (max-width: 575.98px) {
+.header_inn .logo {z-index: 10000;}
 .conts1 .inn ul > li > img {width: 70%;}
 .conts1 .inn ul > li {gap: 5px;}
 .conts1 {height: auto;}
 .conts1 .inn {display: flex; align-items: center;}
-.yt_title p {line-height: 1.5;}
+.yt_title p, .wrap .sub_banner h3 {line-height: 1.5;}
 .conts2 .inn ul li img {transform: scale(0.8);}
 .conts3 {padding: 20px;}
 .gallery_item:nth-child(1) p {line-height: 2;}
 .footer .footer_inn {gap: 20px; flex-direction: column; padding: 30px 0px;}
+.footer .footer_inn a {left: -65px;}
 .footer_inn .footer_info p {line-height: 1.5;}
 .mission .happy {flex-wrap: wrap; row-gap: 20px; justify-content: center;}
 .happy .spell {width: 26%;}
@@ -171,7 +250,7 @@
 .criteria thead tr th:nth-child(1) {width: 10%;}
 .criteria tbody tr :nth-child(1) {padding: 0;}
 .criteria tbody tr td:nth-child(2) {padding-left: 10px;}
-.insure_list_criteria.benefit tbody tr td:nth-child(2) {line-height: 1.5;}
+.insure_list_criteria.benefit tbody tr td:nth-child(2),  .criteria tbody tr td:nth-child(2) {line-height: 1.5;}
 .insure_ttl {flex-direction: column;}
 .insurance .insure_ttl p {margin-right: 0;}
 .care_item .care_circle {min-height: 90px;}
@@ -182,16 +261,74 @@
 .conts .job_table tbody tr {height: 45px!important;}
 .job_info .green_icon {font-size: 17px;}
 .job_info .green_icon::before {top: 4px;}
+.header_inn .checkbox_ham:checked ~ .background {width: 100%;}
+.header_inn .checkbox_ham:checked ~ .nav {width: 100%;}
+.conts .flex_reverse {flex-direction: column!important;}
+.conts .flex_txt_wrap {padding-left: 0;}
+.conts .flex_txt_wrap p {line-height: 2; padding-top: 10px;}
+.conts .flex_reverse_list {gap: 30px;}
+.conts ul li::before {top: 0;}
+.notice_write .ann_title {flex-wrap: wrap-reverse; padding: 10px;}
+.notice_write .ann_title > input {flex: 1 0 auto;}
+.notice_write .ann_title .chk_outer {justify-content: center; width: 100%;}
+.editor_wrap .ck-editor__editable_inline {min-height: 250px;}
+.conts.notice_write .btn_wrap {margin-top: 50px;}
+.notice_write .ann_title .chck_wrp:nth-child(1) {padding-left: 25px;}
+.notice_write .ann_title .chck_wrp:nth-child(1) .checkmark {left: 0;}
+.job_detail .job_detail_ttl {flex-direction: column; height: auto;}
+.job_dtl_cont1 .row p:first-child {width: 80px;}
+.flex_desc .row {min-height: 30px;} 
+.job_dtl_cont1 .flex_desc .row p {line-height: 4;}
+.job_dtl_cont2 .job_form .input_wrap label {width: 80px; line-height: 67px;}
+.job_dtl_cont2 .job_form .input_wrap:first-child input {height: 35px;}
+.input_wrap .inputs input {height: 35px;}
+.job_dtl_cont2 .job_form .input_wrap {height: auto;}
+.organization .level-3-wrapper::after {left: 5px;}
+.organization .level-3-wrapper::before {width: calc(50% - 5px); left: 5px;}
+.organization .level-3-wrapper > li > div::before {left: -16px;  width: calc(100% + 40px); }
+.level-3-wrapper > li {margin-left: 20px!important;}
+.organization .level-4-wrapper {margin-left: 11px;}
+.organization .level-3-last > p {margin-left: 115px;}
+.organization .level-3-wrapper > li > div {min-height: 80px; height: 100%; width: 100px; padding: 10px 15px;}
+.level-4.rectangle.base {width: 55px;}
+.organization .rectangle {width: 110px;}
+.organization .level-2-wrapper {grid-template-columns: repeat(2, 50%);}
 }
 @media screen and (max-width: 483px) {
-    .banner_text {left:50px; max-width: 100%;} 
-    .gallery_item p {line-height: 1.5;}
-    .conts2 .inn ul {flex-wrap: wrap; width: 100%;}
-    .conts .conts2 .inn ul li {width: 50%; flex-shrink: 0; flex: none;}
-    .circle_diagram .circle p {line-height: 1.5;}
-    .vision .circle_diagram > img {width: 120px; margin-top: 30px;}
-    .conts.job_info .green_icon {line-height: 1.5;}
-    .circle_diagram .circle h4 {padding-bottom: 0;}
-    .conts.job_info li {padding-left: 20px; line-height: 2;}
-    .job_table colgroup col:nth-child(1) {width: 50px;}
+.banner_text {left:50px; max-width: 100%;} 
+.footer .footer_inn a {left: -20px; margin-right: auto;}
+.gallery_item p {line-height: 1.5;}
+.conts2 .inn ul {flex-wrap: wrap; width: 100%;}
+.conts .conts2 .inn ul li {width: 50%; flex-shrink: 0; flex: none;}
+.circle_diagram .circle p {line-height: 1.5;}
+.vision .circle_diagram > img {width: 120px; margin-top: 30px;}
+.conts.job_info .green_icon, .target .eligiblity ul li {line-height: 2;}
+.circle_diagram .circle h4 {padding-bottom: 0;}
+.conts.job_info li {padding-left: 20px; line-height: 2;}
+.job_table colgroup col:nth-child(1) {width: 50px;}
+.flex_1000 .flex_1000_item p:first-child {width: 100%;}
+.flex_1000_item {display: flex; flex-wrap: wrap;}
+.directions .dir_tag {flex-direction: column; gap: 0; margin-bottom: 0;}
+.dir_tag > p {text-align: center; padding-top: 10px;}
+.facility_gallery .facility_item p {margin-top: 0;}
+.target .eligiblity ul, .prepare .pre_inn, .pre_inn .pre_list_item:nth-child(2) > p {margin-top: 10px;}
+.insurance .elderly_insurance li span {width: 40px;}
+.conts.insurance .flex_list > .flex_item {padding: 15px 0; gap: 10px;}
+.conts.insurance .flex_item span + p {line-height: 1.5;}
+.insure_list_criteria.benefit tbody tr td:nth-child(2) {padding-left: 20px;}
+.filter {flex-wrap: wrap;}
+.filter .select_wrap {flex: 1;}
+.filter .select_wrap select {width: 100%;}
+.filter .search_wrap {width: 100%;}
+.conts #search {height: 40px; width: auto; flex-grow: 1;}
+.conts.job_info .vol_quali li {line-height: 2;}
+.job_info .volunteer {line-height: 1.5;}
+.wrap .sub_menu {height: auto;}
+.wrap .sub_menu ul {flex-wrap: wrap;}
+.wrap .sub_menu ul li {width: 50%;}
+.wrap .sub_menu ul li:nth-child(even) {border: 0;}
+.job_dtl_cont1 .row p:first-child {width: 60px;}
+.job_detail .job_dtl_cont1 {padding: 20px 0;}
+.flex_desc .row p:nth-child(2) {padding-left: 10px!important;}
+.facility_item .facility_flex {margin-top: 5px;}
 }
